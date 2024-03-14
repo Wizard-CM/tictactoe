@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --bg-color: #1f1f2f;
+  --font-color: #fff;
+  --light-bg-color: #4b494f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: var(--bg-color);
+  color: var(--font-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Utility Classes */
+.game-finished {
+  cursor: not-allowed !important;
+}
+.pink-bg {
+  background: rgb(255, 70, 163) !important;
+}
+
+.purple-bg {
+  background: rgba(105, 71, 255, 0.999) !important;
+}
+
+/* Conditional Elements Stlying */
+.full {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full > button {
+  padding: 0.8rem 1.5rem;
+  background: #25ffb3c5;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.full > button:hover {
+  opacity: 0.9;
+}
+.full > p {
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 5rem;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+}
+/* User Related */
+.users {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* align-items: center; */
+}
+.user-lt,
+.user-rt {
+  background: var(--light-bg-color);
+  padding: 0.7rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.user-lt {
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.user-rt {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.game-container > h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  background: var(--light-bg-color);
+  padding: 0.5rem 1.7rem;
+  border-radius: 0.3rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* Square Related */
+.square-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.square {
+  height: 100px;
+  width: 100px;
+  border-radius: 0.5rem;
+  background: var(--light-bg-color);
+  cursor: pointer;
+}
+.square:hover {
+  opacity: 0.8;
+}
+
+/* Indications */
+main > p {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+main > p > span {
+  font-size: 3rem;
+  color: rgb(255, 70, 70);
+}
